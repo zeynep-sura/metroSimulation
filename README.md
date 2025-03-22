@@ -31,7 +31,7 @@ A* : Dijkstra’dan daha hızlıdır çünkü sadece en umut verici yolları gen
 Heuristic (h) fonksiyonu sayesinde akıllı seçimler yapar
 Yol bulma (pathfinding) problemlerinde en iyi performanslardan birini sunar.
 
-#örnek çıktı
+#ornek çıktı
 AŞTİ'den OSB'ye:
 En az aktarmalı rota: AŞTİ -> Kızılay -> Ulus -> Demetevler -> OSB
 En hızlı rota (18 dakika): AŞTİ -> Kızılay -> M2 -> Sıhhiye -> Gar -> OSB

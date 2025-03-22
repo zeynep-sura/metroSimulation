@@ -8,7 +8,7 @@ heapq: küçükten büyüğe sıralı bir yapı oluşturur ve en küçük ögeye
 
 # Kullanılan Algoritmalar:
 
-# BFS algoritması,
+#### BFS algoritması,
 genişlik öncelikli bir arama algoritmasıdır.
 başlangıç düğümü kuyruğa eklenir.
 kuyruğun başındaki düğüm işlenir ve komşuları kuyruğa eklenir.

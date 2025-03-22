@@ -8,14 +8,14 @@ heapq: küçükten büyüğe sıralı bir yapı oluşturur ve en küçük ögeye
 
 ### Kullanılan Algoritmalar:
 
-BFS algoritması,
+# BFS algoritması,
 genişlik öncelikli bir arama algoritmasıdır.
 başlangıç düğümü kuyruğa eklenir.
 kuyruğun başındaki düğüm işlenir ve komşuları kuyruğa eklenir.
 hedef düğüm bulunana kadar süreç devam eder.
 bulunan en kısa yolu geriye doğru takip eder.
 
-A* algoritması, 
+# A* algoritması, 
 Dijkstra ve Greedy Best-First Search yaklaşımlarını birleştiren akıllı bir arama algoritmasıdır.
 bir öncelik kuyruğu (priority queue) kullanarak düğümleri işler.
 her düğümün toplam maliyeti (g + h) hesaplanır:

@@ -24,20 +24,19 @@ h: Mevcut düğümden hedefe olan tahmini maliyet (heuristic function).<br>
 en düşük maliyetli düğüm önce işlenir.<br>
 hedefe ulaşıldığında en kısa yolu geriye doğru takip eder.<br>
 
-#### Neden BFS ve A*?
+# Neden BFS ve A*?
 BFS : ağırlıksız grafta en kısa yolu bulur. basit ve verimli bir yapıya sahiptir. <br>
 
-A* : Dijkstra’dan daha hızlıdır çünkü sadece en umut verici yolları genişletir,<br>
-Heuristic (h) fonksiyonu sayesinde akıllı seçimler yapar<br>
+A* : Dijkstra’dan daha hızlıdır çünkü sadece en umut verici yolları genişletir,Heuristic (h) fonksiyonu sayesinde akıllı seçimler yapar<br>
 Yol bulma (pathfinding) problemlerinde en iyi performanslardan birini sunar.<br>
 
-##### Örnek çıktı
+# Örnek çıktı
 AŞTİ'den OSB'ye:<br>
 En az aktarmalı rota: AŞTİ -> Kızılay -> Ulus -> Demetevler -> OSB<br>
 En hızlı rota (18 dakika): AŞTİ -> Kızılay -> M2 -> Sıhhiye -> Gar -> OSB<br>
 
 
-###### Proje geliştirme fikirleri 
+# Proje geliştirme fikirleri 
 kullanıcıya hatlar arasında bağlantılar ekleyebilme veya mevcut bağlantıları güncelleyebilme yeteneği verilebilir.<br>
 her istasyon ve hat için bir zaman çizelgesi oluşturabilir ve bu zaman çizelgesine göre rotalar hesaplanabilir. Ayrıca, duraklardaki bekleme süreleri de hesaba katılabilir.<br>
 navigasyon sistemlerinde bu algoritmaları entegre edebiliriz

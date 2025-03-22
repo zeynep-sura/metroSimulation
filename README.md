@@ -1,10 +1,10 @@
 # MetroSimulation
 Bu proje, en kısa yolu bulmak için BFS ve A* algoritmalarını kullanarak haritalar üzerindeki en etkili rota planlamasını yapmayı amaçlamaktadır.
 
-## Kullanılan Kütüphaneler: 
-collections defaultdict : anahtar bulunmazsa otomatik olarak varsayılan değer döner
-collections deque : iki uçtan veri ekleyip çıkarılabilen hızlı bir kuyruk yapısı
-heapq: küçükten büyüğe sıralı bir yapı oluşturur ve en küçük ögeye hızlı erişim sağlar.
+# Kullanılan Kütüphaneler: 
+## collections defaultdict : anahtar bulunmazsa otomatik olarak varsayılan değer döner
+## collections deque : iki uçtan veri ekleyip çıkarılabilen hızlı bir kuyruk yapısı
+## heapq: küçükten büyüğe sıralı bir yapı oluşturur ve en küçük ögeye hızlı erişim sağlar.
 
 # Kullanılan Algoritmalar:
 
@@ -15,10 +15,10 @@ kuyruğun başındaki düğüm işlenir ve komşuları kuyruğa eklenir.
 hedef düğüm bulunana kadar süreç devam eder.
 bulunan en kısa yolu geriye doğru takip eder.
 
-# A* algoritması, 
+#### A* algoritması, 
 Dijkstra ve Greedy Best-First Search yaklaşımlarını birleştiren akıllı bir arama algoritmasıdır.
-bir öncelik kuyruğu (priority queue) kullanarak düğümleri işler.
-her düğümün toplam maliyeti (g + h) hesaplanır:
+bir öncelik kuyruğu (priority queue) kullanarak düğümleri işler.<br>
+her düğümün toplam maliyeti (g + h) hesaplanır.
 g: Başlangıç düğümünden mevcut düğüme olan gerçek maliyet.
 h: Mevcut düğümden hedefe olan tahmini maliyet (heuristic function).
 en düşük maliyetli düğüm önce işlenir.

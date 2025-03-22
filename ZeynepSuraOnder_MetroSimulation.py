@@ -65,21 +65,27 @@ class MetroAgi:
 
         baslangic = self.istasyonlar[baslangic_id]
         hedef = self.istasyonlar[hedef_id]
-        ziyaret_edildi = {}
-        oncelikli_kuyruk =[(0,baslangic,[baslangic])]
 
+        def heuristic(istasyon: Istasyon) -> int:
+          return 0
+
+        ziyaret_edildi = {}
+        oncelikli_kuyruk = [(0 + heuristic(baslangic), 0, baslangic, [baslangic])]  # (f = g + h, g, node, path)
+       
         while oncelikli_kuyruk:
-            sure,mevcut,yol = heapq.heappop(oncelikli_kuyruk)
+            f,g, mevcut,yol = heapq.heappop(oncelikli_kuyruk)
             
             if mevcut== hedef:
-                return yol, sure
+                return yol, g
             
-            if mevcut in ziyaret_edildi and ziyaret_edildi[mevcut] <= sure:
+            if mevcut in ziyaret_edildi and ziyaret_edildi[mevcut] <= g:
                 continue
-            ziyaret_edildi[mevcut] = sure
+            ziyaret_edildi[mevcut] = g
 
             for komsu,ek_sure in mevcut.komsular:
-                heapq.heappush(oncelikli_kuyruk,(sure + ek_sure, komsu, yol + [komsu]))
+                yeni_g = g+ek_sure
+                f_komsu = yeni_g + heuristic(komsu)
+                heapq.heappush(oncelikli_kuyruk,(f_komsu,yeni_g, komsu, yol + [komsu]))
         return None
 
 

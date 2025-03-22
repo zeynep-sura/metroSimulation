@@ -1,4 +1,4 @@
-# MetroSimulation
+# Metro Simulasyonu
 Bu proje, en kısa yolu bulmak için BFS ve A* algoritmalarını kullanarak haritalar üzerindeki en etkili rota planlamasını yapmayı amaçlamaktadır.
 
 # Kullanılan Kütüphaneler: 

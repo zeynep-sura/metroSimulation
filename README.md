@@ -33,7 +33,7 @@ Yol bulma (pathfinding) problemlerinde en iyi performanslardan birini sunar.<br>
 # Örnek çıktı
 AŞTİ'den OSB'ye:<br>
 En az aktarmalı rota: AŞTİ -> Kızılay -> Ulus -> Demetevler -> OSB<br>
-En hızlı rota (18 dakika): AŞTİ -> Kızılay -> M2 -> Sıhhiye -> Gar -> OSB<br>
+En hızlı rota (25 dakika): AŞTİ -> Kızılay -> Kızılay -> Ulus -> Demetevler -> OSB<br>
 
 
 # Proje geliştirme fikirleri 

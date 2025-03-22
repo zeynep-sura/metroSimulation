@@ -37,7 +37,7 @@ En az aktarmalı rota: AŞTİ -> Kızılay -> Ulus -> Demetevler -> OSB
 En hızlı rota (18 dakika): AŞTİ -> Kızılay -> M2 -> Sıhhiye -> Gar -> OSB
 
 
-###### Proje gelştirme fikirleri 
+###### Proje geliştirme fikirleri 
 kullanıcıya hatlar arasında bağlantılar ekleyebilme veya mevcut bağlantıları güncelleyebilme yeteneği verilebilir.
 her istasyon ve hat için bir zaman çizelgesi oluşturabilir ve bu zaman çizelgesine göre rotalar hesaplanabilir. Ayrıca, duraklardaki bekleme süreleri de hesaba katılabilir.
 navigasyon sistemlerinde bu algoritmaları entegre edebiliriz

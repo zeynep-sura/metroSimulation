@@ -6,7 +6,7 @@ collections defaultdict : anahtar bulunmazsa otomatik olarak varsayılan değer 
 collections deque : iki uçtan veri ekleyip çıkarılabilen hızlı bir kuyruk yapısı
 heapq: küçükten büyüğe sıralı bir yapı oluşturur ve en küçük ögeye hızlı erişim sağlar.
 
-### Kullanılan Algoritmalar:
+# Kullanılan Algoritmalar:
 
 # BFS algoritması,
 genişlik öncelikli bir arama algoritmasıdır.

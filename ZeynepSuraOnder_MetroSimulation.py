@@ -57,35 +57,26 @@ class MetroAgi:
                     queue.append((komsu,yol + [komsu]))
         return None
 
+    def heuristik(self, istasyon1: Istasyon, hedef_id: str) -> int:
+        return abs(int(istasyon1.idx[1]) - int(hedef_id[1]))
+
     def en_hizli_rota_bul(self, baslangic_id: str, hedef_id: str) -> Optional[Tuple[List[Istasyon], int]]:
         
-        
         if baslangic_id not in self.istasyonlar or hedef_id not in self.istasyonlar:
-            return None
-
-        baslangic = self.istasyonlar[baslangic_id]
-        hedef = self.istasyonlar[hedef_id]
-
-        def heuristic(istasyon: Istasyon) -> int:
-          return 0
-
-        ziyaret_edildi = {}
-        oncelikli_kuyruk = [(0 + heuristic(baslangic), 0, baslangic, [baslangic])]  # (f = g + h, g, node, path)
-       
+            return None 
+        
+        oncelikli_kuyruk = [(0 + self.heuristik(self.istasyonlar[baslangic_id], hedef_id), 0, self.istasyonlar[baslangic_id], [self.istasyonlar[baslangic_id]])]
+        ziyaret_edildi = {} 
         while oncelikli_kuyruk:
-            f,g, mevcut,yol = heapq.heappop(oncelikli_kuyruk)
-            
-            if mevcut== hedef:
-                return yol, g
-            
-            if mevcut in ziyaret_edildi and ziyaret_edildi[mevcut] <= g:
-                continue
-            ziyaret_edildi[mevcut] = g
-
-            for komsu,ek_sure in mevcut.komsular:
-                yeni_g = g+ek_sure
-                f_komsu = yeni_g + heuristic(komsu)
-                heapq.heappush(oncelikli_kuyruk,(f_komsu,yeni_g, komsu, yol + [komsu]))
+            f, toplam_sure, mevcut, rota = heapq.heappop(oncelikli_kuyruk) 
+            if mevcut.idx == hedef_id:
+                return (rota, toplam_sure) 
+            if mevcut.idx in ziyaret_edildi and ziyaret_edildi[mevcut.idx] <= toplam_sure:
+                continue 
+            ziyaret_edildi[mevcut.idx] = toplam_sure 
+            for komsu, sure in mevcut.komsular:
+                yeni_sure = toplam_sure + sure 
+                heapq.heappush(oncelikli_kuyruk, (yeni_sure + self.heuristik(komsu, hedef_id), yeni_sure, komsu, rota + [komsu]))
         return None
 
 

@@ -15,11 +15,6 @@ class Istasyon:
     def __lt__(self, other: 'Istasyon'):
         return self.idx < other.idx
 
-    def __eq__(self, other: 'Istasyon'):
-        return self.idx == other.idx
-    
-    def __hash__(self):
-        return hash(self.idx) 
 class MetroAgi:
     def __init__(self):
         self.istasyonlar: Dict[str, Istasyon] = {}

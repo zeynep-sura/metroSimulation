@@ -3,6 +3,7 @@ import heapq
 from typing import Dict, List, Set, Tuple, Optional
 
 class Istasyon:
+   
     def __init__(self, idx: str, ad: str, hat: str):
         self.idx = idx
         self.ad = ad
@@ -16,6 +17,7 @@ class Istasyon:
         return self.idx < other.idx
 
 class MetroAgi:
+    
     def __init__(self):
         self.istasyonlar: Dict[str, Istasyon] = {}
         self.hatlar: Dict[str, List[Istasyon]] = defaultdict(list)
@@ -36,6 +38,7 @@ class MetroAgi:
         
         if baslangic_id not in self.istasyonlar or hedef_id not in self.istasyonlar:
             return None
+       
         baslangic = self.istasyonlar[baslangic_id]
         hedef = self.istasyonlar[hedef_id]
         ziyaret_edildi = {baslangic} 
